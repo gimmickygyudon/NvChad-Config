@@ -52,7 +52,7 @@ end, {})
 
 
 -- Copilot Chat
-map({"n", "i", "v"}, '<leader>ccq', function()
+map({"n", "v"}, '<leader>ccq', function()
   local input = vim.fn.input("Quick Chat: ")
 
   local selection = { selection = copilotSelect.visual }
@@ -84,3 +84,7 @@ end, {
   desc = "CopilotChat - Prompt actions",
 })
 -- Copilot Chat
+
+-- Code Actions
+map('n', '<C-.>', '<cmd>lua vim.lsp.buf.code_action()<CR>', { noremap = true, silent = true })
+
