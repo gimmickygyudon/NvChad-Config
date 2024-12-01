@@ -116,4 +116,41 @@ return {
     end,
   },
   -- FLUTTER
+
+  {
+    'lewis6991/satellite.nvim',
+    lazy = false,
+    opts = function()
+      require('satellite').setup {
+        winblend = 50,
+        zindex = 40,
+        handlers = {
+          cursor = {
+            enable = true,
+            symbols = { '█' }
+            -- Highlights:
+            -- - SatelliteCursor (default links to NonText
+          },
+          search = {
+            enable = true,
+            symbols = { '▕', '▕' }
+            -- Highlights:
+            -- - SatelliteSearch (default links to Search)
+            -- - SatelliteSearchCurrent (default links to SearchCurrent)
+          },
+          diagnostic = {
+            enable = true,
+            -- signs = {'-', '=', '≡'},
+            signs = { '￭', '￭', '￭', '￭' },
+            min_severity = vim.diagnostic.severity.HINT,
+            -- Highlights:
+            -- - SatelliteDiagnosticError (default links to DiagnosticError)
+            -- - SatelliteDiagnosticWarn (default links to DiagnosticWarn)
+            -- - SatelliteDiagnosticInfo (default links to DiagnosticInfo)
+            -- - SatelliteDiagnosticHint (default links to DiagnosticHint)
+          },
+        }
+      }
+    end,
+  }
 }

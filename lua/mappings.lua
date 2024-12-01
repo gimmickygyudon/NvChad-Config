@@ -28,10 +28,10 @@ end, { desc = "Replace all occurrences with prompted input" })
 -- Terminal Configuration
 map({ "n", "t" }, "<A-i>", function()
     require("nvchad.term").toggle { pos = "float", id = "floatTerm", float_opts={
-        row = 0.55,
-        col = 0.55,
-        width = 0.4,
-        height = 0.8
+        row = 0.25,
+        col = 0.25,
+        width = 0.5,
+        height = 0.5
     }}
 end, { desc = "terminal toggle floating term" })
 -- Terminal Configuration
